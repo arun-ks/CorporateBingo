@@ -1,5 +1,5 @@
 # Corporate Bingo
-Light Hearted Game to liven up your Teams/Zoom calls.
+This is a light hearted fame to liven up your Teams/Zoom calls.
 
 This game will encourage the user to listen more carefully the proceedings.
 
@@ -19,7 +19,7 @@ No installation required, just click on [this link](https://arun-ks.github.io/Co
 ## Warning
 Remember that not everyone in the call, would share your sense of humor or appreciate you having fun playing Corporate Bingo. 
 
-__Use this discreetly at your own risk.__ 
+Hence, __play this discreetly at your own risk.__ 
 
 ## To Do
 - [ ] Currently this uses a hard-coded list of default phrases, make this list customizable by the user.
