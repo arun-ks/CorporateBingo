@@ -8,7 +8,7 @@ The game can be played alone or along with friends/colleagues.
 ## Installation
 No installation required, just click on [this link](https://arun-ks.github.io/CorporateBingo/) to generate a Bingo Card.
 
-## How to use/play
+## How to Play Corporate Bingo
 + Open [this link](https://arun-ks.github.io/CorporateBingo/), to view your randomly generated Bingo Card. 
     + You can create a new Bingo Card by refreshing the page.
 + Listen carefully to what people say in the Call & mark the phrases you hear, by clicking on them. 
@@ -19,7 +19,7 @@ No installation required, just click on [this link](https://arun-ks.github.io/Co
 ## Warning
 Remember that not everyone in the call, would share your sense of humor or appreciate you having fun playing Corporate Bingo. 
 
-__You this discreetly at your own risk.__ 
+__Use this discreetly at your own risk.__ 
 
 ## To Do
 - [ ] Currently this uses a hard-coded list of default phrases, make this list customizable by the user.
