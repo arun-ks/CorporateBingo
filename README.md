@@ -25,3 +25,4 @@ For offline use on your computer, you can run this command :
 - [ ] The card size, the Dabber-Mark size are hardcoded, make them relative for easy portability
 - [ ] The HTML needs to be split into CSS & Javascript file for easier maintanence
 - [ ] Add instructions in the page with the Bingo Card for new users.
+- [ ] Improve UX with favicon, logos etc
