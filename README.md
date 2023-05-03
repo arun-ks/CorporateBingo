@@ -31,5 +31,5 @@ Hence, __play this discreetly at your own risk.__
 - [X] Add link to repository in case raw HTML is passed around.
 - [ ] Add logic to check if the user has won 
 - [ ] Eliminate use of PNG files for the Dabble Marker with CSS-based code
-- [ ] Make it easy for users to hide the instructions. By default this should be hidden unless someone presses/hovers over the text.
+- [X] Make the instructions collapsible. By default the instructions should be hidden unless someone presses/hovers over the text.
 
