@@ -15,8 +15,9 @@
      font-family: Georgia, "Times New Roman", Times, serif;
      font-size: 28px;
 }
- table {
+table {
      border-collapse: collapse;
+
 }
  th {
      color:white;
@@ -26,14 +27,19 @@
      font-size:24px;
      border: 2px #666 solid;
      text-align: center;
+     border-style: solid;
 }
- td {
+ #BigTable td{
+  border-style: none;               
+}
+ #BingoCardTable td {
      background-color:white;
      width:150px;
      height:150px;
      border: 2px #666 solid;
      text-align: center;
 }
+
  .dabberMark {
      background-repeat: no-repeat;
 }
@@ -68,9 +74,8 @@ const myArray = ["Expedite",
     "Not ready",
     "Not aligned",
     "Miscommunication",
-    "Please follow up?"
+    "Please follow up"
 ];
-
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -83,9 +88,10 @@ function shuffleArray(array) {
 function genrNewBingoCard() {
     // Delete the old Bingo Card
     $("#myBingoCard").html("");
-    output = '<table><thead><tr><th colspan=5> Corporate Bingo </th></tr></thead>';
-    output += '<tbody>';
+    output = '<table border="0" ><thead><tr><th colspan=5> Corporate Bingo </th></tr></thead>';
+    output += '<tbody id="BingoCardTable">';
 
+    //Make new 5x5 Bingo Card
     const randomizedArray = shuffleArray(myArray);
     for (i = 0; i < 5; i += 1) {
         output += '<tr>';
@@ -114,7 +120,7 @@ var DabberMark = {
           }
     },
 
-    // On all bingo card cells, attach listener for mouse/touch events 
+    // On all bingo card cells, attach listener for mouse/touch events which will toggle the Dabber Mark
     init: function() {
         var bingoCardCells = document.getElementById("myBingoCard").getElementsByTagName("td");
         for (bingoCardCell of bingoCardCells) {
@@ -127,9 +133,24 @@ var DabberMark = {
 </head>
 <body>
 <h1>Bingo for your Zoom or Teams Call</h1>
-<div id="myBingoCard">
-</div>
+<table style="width:100%" id="BigTable"> 
+  <tr>  
+    <td style="width:80%"><div id="myBingoCard"/>  </td> 
+    <td valign="bottom" > 
+        <b>Instructions</b> <br>
+        
+     <ol>
+       <li>Listen carefully to what people say in the Call & mark the phrases you hear, by clicking on them.</li>
+       <li>    In case you did a mistake, you can undo selection, by clicking the cell again</li>
+       <li> If you get to mark all cells of a row, or of a column or of a diagonal, shout <b>BINGO</b></li>
+       <li> Continue playing to see if you can mark other row/column/diagonal. </li>
+       <li> You can <a id="myLink" href="#" onclick="genrNewBingoCard();return false;">click here</a> to generate a new Bingo Card</li>
+    </ol>
+    <div align="right"><font size="2" color="red"><a href="https://github.com/arun-ks/CorporateBingo">Source</a>   </font>  </div>
+    </td>
+  </tr>
+</table>
 
-<p> <a id="myLink" href="#" onclick="genrNewBingoCard();return false;">Generate New Card</a></p>
+
 </body>
 </html>
