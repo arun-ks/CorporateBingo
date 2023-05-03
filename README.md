@@ -26,8 +26,9 @@ Hence, __play this discreetly at your own risk.__
 - [ ] Update list of default Phrases
 - [ ] The card size, the Dabber-Mark size are hardcoded, make them relative for easy portability
 - [ ] The HTML needs to be split into CSS & Javascript file for easier maintanence
-- [ ] Add instructions in the page with the Bingo Card for new users.
-- [ ] Improve UX with favicon, logos, link to repo etc
+- [X] Add instructions in the page with the Bingo Card for new users.
+- [ ] Improve UX with favicon, logos
+- [X] Add link to repository in case raw HTML is passed around.
 - [ ] Add logic to check if the user has won 
 - [ ] Eliminate use of PNG files for the Dabble Marker with CSS-based code
 
