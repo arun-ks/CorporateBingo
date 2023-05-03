@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Online Corporate Bingo Card</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>      
-<style type="text/css">
-	   body {
+  <meta charset="UTF-8">
+  <title>Online Corporate Bingo Card</title>
+  <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <style type="text/css">
+           body {
      background-color: white;
      color: black;
      font-size: 20px;
      font-family: "Times New Roman", Verdana, Arial, Helvetica, sans-serif;
-}
- h1{
+  }
+  h1{
      font-family: Georgia, "Times New Roman", Times, serif;
      font-size: 28px;
-}
-table {
+  }
+  table {
      border-collapse: collapse;
 
-}
- th {
+  }
+  th {
      color:white;
      background:grey;
      height:40px;
@@ -28,29 +29,27 @@ table {
      border: 2px #666 solid;
      text-align: center;
      border-style: solid;
-}
- #BigTable td{
+  }
+  #BigTable td{
   border-style: none;               
-}
- #BingoCardTable td {
+  }
+  #BingoCardTable td {
      background-color:white;
      width:150px;
      height:150px;
      border: 2px #666 solid;
      text-align: center;
-}
+  }
 
- .dabberMark {
+  .dabberMark {
      background-repeat: no-repeat;
-}
+  }
 
-</style> 
+  </style>
+  <script type="text/javascript">
+  window.onload = genrNewBingoCard;
 
-
-<script type="text/javascript" >
-	  window.onload = genrNewBingoCard;
-
-const myArray = ["Expedite",
+  const myArray = ["Expedite",
     "Mitigate",
     "Escalation",
     "Urgent Request",
@@ -73,19 +72,20 @@ const myArray = ["Expedite",
     "At risk",
     "Not ready",
     "Not aligned",
+    "This is Red now",
     "Miscommunication",
     "Please follow up"
-];
-function shuffleArray(array) {
+  ];
+  function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
-}
+  }
 
 
-function genrNewBingoCard() {
+  function genrNewBingoCard() {
     // Delete the old Bingo Card
     $("#myBingoCard").html("");
     output = '<table border="0" ><thead><tr><th colspan=5> Corporate Bingo </th></tr></thead>';
@@ -102,20 +102,20 @@ function genrNewBingoCard() {
     }
     output += "</tbody></table>";
     $("#myBingoCard").append(output);
- 
-    DabberMark.init();
-}
 
-var DabberMark = {
+    DabberMark.init();
+  }
+
+  var DabberMark = {
     // Toggle the Dabber Mark on a Bingo Card Cell 
     toggleDabberMark: function(e) {
         var target = e.currentTarget;
         if (target.classList.contains("dabberMark")) {
             target.classList.remove("dabberMark");
-            target.style.backgroundImage = null;				    
+            target.style.backgroundImage = null;                                    
         } else {
             target.classList.add("dabberMark");
-				    target.style.backgroundImage = "url('images/dabberMarkColor"+ Math.floor(Math.random() * 5 + 1) + ".png')"; 
+            target.style.backgroundImage = "url('images/dabberMarkColor"+ Math.floor(Math.random() * 5 + 1) + ".png')"; 
             target.style.backgroundPosition = Math.floor(Math.random() * 50 + 10)+"px  " + Math.floor(Math.random() * 50 + 10)+ "px";
           }
     },
@@ -127,30 +127,30 @@ var DabberMark = {
             bingoCardCell.addEventListener("mousedown", this.toggleDabberMark);
         }
     }
-};
-	</script>
-	
+  };
+  </script>
 </head>
 <body>
-<h1>Bingo for your Zoom or Teams Call</h1>
-<table style="width:100%" id="BigTable"> 
-  <tr>  
-    <td style="width:80%"><div id="myBingoCard"/>  </td> 
-    <td valign="bottom" > 
-        <b>Instructions</b> <br>
-        
-     <ol>
-       <li>Listen carefully to what people say in the Call & mark the phrases you hear, by clicking on them.</li>
-       <li>    In case you did a mistake, you can undo selection, by clicking the cell again</li>
-       <li> If you get to mark all cells of a row, or of a column or of a diagonal, shout <b>BINGO</b></li>
-       <li> Continue playing to see if you can mark other row/column/diagonal. </li>
-       <li> You can <a id="myLink" href="#" onclick="genrNewBingoCard();return false;">click here</a> to generate a new Bingo Card</li>
-    </ol>
-    <div align="right"><font size="2" color="red"><a href="https://github.com/arun-ks/CorporateBingo">Source</a>   </font>  </div>
-    </td>
-  </tr>
-</table>
-
-
+  <h1>Bingo for your Zoom or Teams Call</h1>
+  <table style="width:100%" id="BigTable">
+    <tr>
+      <td style="width:80%">
+        <div id="myBingoCard"></div>
+      </td>
+      <td valign="bottom">
+        <b>Instructions</b><br>
+        <ol>
+          <li>Listen carefully to what people say in the Call & mark the phrases you hear, by clicking on them.</li>
+          <li>In case you did a mistake, you can undo selection, by clicking the cell again</li>
+          <li>If you get to mark all cells of a row, or of a column or of a diagonal, shout <b>BINGO</b></li>
+          <li>Continue playing to see if you can mark other row/column/diagonal.</li>
+          <li>You can <a id="myLink" href="#" onclick="genrNewBingoCard();return false;">click here</a> to generate a new Bingo Card.</li>
+        </ol>
+        <div align="right">
+          <font size="2" color="red"><a href="https://github.com/arun-ks/CorporateBingo">Source</a></font>
+        </div>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
