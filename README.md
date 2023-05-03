@@ -29,3 +29,5 @@ Hence, __play this discreetly at your own risk.__
 - [ ] Add instructions in the page with the Bingo Card for new users.
 - [ ] Improve UX with favicon, logos, link to repo etc
 - [ ] Add logic to check if the user has won 
+- [ ] Eliminate use of PNG files for the Dabble Marker with CSS-based code
+
