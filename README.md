@@ -26,7 +26,7 @@ For offline version, clone the repository on your disk.
 
 ## To Do
 - [ ] Currently this uses a hard-coded list of default phrases, make this list customizable by the user.
-- [ ] Update list of default Phrases
+- [X] Update list of default Phrases
 - [ ] The card size, the Dabber-Mark size are hardcoded, make them relative for easy portability
 - [ ] The HTML needs to be split into CSS & Javascript file for easier maintanence
 - [X] Add instructions in the page with the Bingo Card for new users.
