@@ -5,8 +5,6 @@ This game will encourage the user to listen more carefully the proceedings.
 
 The game can be played alone or along with friends/colleagues.
 
-## Installation
-No installation required, just click on [this link](https://arun-ks.github.io/CorporateBingo/) to generate a Bingo Card.
 
 ## How to Play Corporate Bingo
 + Open [this link](https://arun-ks.github.io/CorporateBingo/), to view your randomly generated Bingo Card. 
@@ -21,6 +19,11 @@ Remember that not everyone in the call, would share your sense of humor or appre
 
 Hence, __play this discreetly at your own risk.__ 
 
+## Installation
+No installation required, just click on [this link](https://arun-ks.github.io/CorporateBingo/) to generate a Bingo Card.
+
+For offline version, clone the repository on your disk.
+
 ## To Do
 - [ ] Currently this uses a hard-coded list of default phrases, make this list customizable by the user.
 - [ ] Update list of default Phrases
@@ -31,5 +34,6 @@ Hence, __play this discreetly at your own risk.__
 - [X] Add link to repository in case raw HTML is passed around.
 - [ ] Add logic to check if the user has won 
 - [ ] ~Eliminate use of PNG files for the Dabble Marker with CSS-based code~
-- [X] Make the instructions collapsible. By default the instructions should be hidden unless someone presses/hovers over the text.
+- [X] Make the instructions collapsible & hidden unless someone presses/hovers over the text.
+- [X] Add statutory warning message 
 
