@@ -12,7 +12,7 @@ No installation required, just click on [this link](https://arun-ks.github.io/Co
 + Open [this link](https://arun-ks.github.io/CorporateBingo/), to view your randomly generated Bingo Card. 
     + You can create a new Bingo Card by refreshing the page.
 + Listen carefully to what people say in the Call & mark the phrases you hear, by clicking on them. 
-    + In case you did a mistake, you can undo selection, by clicking the cell again
+    + To undo marking, just click the cell again
 + If you get to mark all cells of a row, or of a column or of a diagonal, shout **BINGO**
 + Continue playing to see if you can mark other row/column/diagonal. Or, you can refresh page to play a new round
 
@@ -30,6 +30,6 @@ Hence, __play this discreetly at your own risk.__
 - [ ] Improve UX with favicon, logos
 - [X] Add link to repository in case raw HTML is passed around.
 - [ ] Add logic to check if the user has won 
-- [ ] Eliminate use of PNG files for the Dabble Marker with CSS-based code
+- [ ] ~Eliminate use of PNG files for the Dabble Marker with CSS-based code~
 - [X] Make the instructions collapsible. By default the instructions should be hidden unless someone presses/hovers over the text.
 
