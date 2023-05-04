@@ -2,9 +2,8 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Online Corporate Bingo Card</title>
-  <script src=
-  "https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <title>Corporate Bingo Card For Teams or Zoom Calls</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <style type="text/css">
   body {
      background-color: white;
@@ -42,8 +41,7 @@
 
   .dabberMark {
      background-repeat: no-repeat;
-  }
-  
+  } 
   
   .collapsibleHeader {
      background-color: #777;
@@ -72,10 +70,20 @@
   .collapsibleContent {
     padding: 0 18px;
     max-height: 0;
+    font-family:Arial,Helvetica;
+    font-size:15px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
   }
+  
+  .showSource {
+     font-family:Arial,Helvetica;
+    font-size:12px;
+    text-align: right;
+    align:right;
+  }
+  
   </style>
   
   <script type="text/javascript">
@@ -128,8 +136,8 @@
             target.style.backgroundImage = null;                                    
         } else {
             target.classList.add("dabberMark");
-            target.style.backgroundImage = "url('images/dabberMarkColor"+ Math.floor(Math.random() * 5 + 1) + ".png')"; 
             target.style.backgroundPosition = Math.floor(Math.random() * 50 + 10)+"px  " + Math.floor(Math.random() * 50 + 10)+ "px";
+            target.style.backgroundImage = "url('images/dabberMarkColor"+ Math.floor(Math.random() * 5 + 1) + ".png')"; 
           }
     },
 
@@ -178,11 +186,12 @@
       });
     }    
   };
+  
   function InitAll() {
     genrNewBingoCard();
     DabberMark.init();
     collapsibleInit();
-  }
+  };
   </script>
 </head>
 <body>
@@ -205,9 +214,17 @@
              </ol>
           </p>
         </div>
-         <div align="right">
-          <font size="2" color="red"><a href="https://github.com/arun-ks/CorporateBingo">Source</a></font>
+        <button class="collapsibleHeader">Must Read</button>
+        <div class="collapsibleContent">
+          <p>  
+             Remember that not everyone in the call, would share your sense of humor or appreciate you having fun playing Corporate Bingo.<br><br>
+             Hence, play this <b>discreetly at your own risk</b>.
+          </p>
         </div>
+
+        <div class="showSource">
+           <a href="https://github.com/arun-ks/CorporateBingo">Source</a>
+        </div> 
       </td>
     </tr>
   </table>
