@@ -89,35 +89,37 @@
   <script type="text/javascript">
   window.onload = InitAll;
 
-  const myArray = ["Expedite",
+  const myArray = [
+    "Expedite",                      //Planning related
     "Mitigate",
     "Escalation",
     "Urgent Request",
     "Defer",
     "Re-plan",
-    "Lessons Learned",
+    "Lessons Learned",                // Post Mortem
     "Root Cause",
     "Prioritization",
-    "I need to drop soon",
-    "Let us take this offline",
-    "Please setup a call",
-    "Create a slide",
-    "Can you hear me?",
+    "I need to drop soon",           // Scheduling
+    "Working on weekend",  
+    "Sorry I joined late",             //Connection Issues
     "I cannot see the screen",
+    "Can you hear me?",
     "Can you repeat that ?",
     "I was speaking on mute",
     "Your voice is breaking",
     "There is a connection issue",
-    "Please mute themselves",
-    "Working on weekend",
-    "No support",
-    "At risk",
+    "Please mute yourself",  
+    "Let us take this offline",      //Follow up later
+    "Please setup a call",
+    "Create a slide",   
+    "Please follow up",
+    "At risk",                       //Status
     "Not ready",
     "Not aligned",
+    "No support from other team",   
     "This is Red now",
-    "Miscommunication",
-    "On-Off switch",
-    "Please follow up"
+    "Miscommunication",              // Misc
+    "On-Off switch",   
   ];
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -186,6 +188,22 @@
       });
     }    
   };
+  function checkIfBingo() {
+    /**
+    Algorithm
+       1. On Click, check if any row,col or diagonal is fully marked.
+          - Iterate 5 steps using these tuples {start cell, step count}
+              - Columns {1,5},{2,5},{3,5},{4,5},{5,5}
+              - Rows {1,1},{6,1},{11,1},{16,1},{21,1}
+              - Diagonals {1,6},{5,4}
+          - If any unmarked cell is found, skip to next tuple   
+          - If any traversal is finds 5 marked items, then announce BINGO. 
+          - Keep tag of identified bingos so there are no dumplicate bingos
+              - Keep array of {BingoFound} with 12 boolean values to keep track
+       2. On refresh, reset the BingoFound markers.    
+    **/
+    
+  }
   
   function InitAll() {
     genrNewBingoCard();
