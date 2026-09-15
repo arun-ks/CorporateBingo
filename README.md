@@ -24,6 +24,8 @@ No installation required, just click on [this link](https://arun-ks.github.io/Co
 
 For offline version, clone the repository on your disk.
 
+Customize the `myArray` list in `index.html` to add terms which fit the people you have meetings with. 
+
 ## To Do
 - [ ] Currently this uses a hard-coded list of default phrases, make this list customizable by the user.
 - [X] Update list of default Phrases
